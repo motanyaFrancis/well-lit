@@ -3,16 +3,15 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn, FaTiktok} from 'react-icons/fa6';
 import Link from 'next/link'
+import Footer from './FooterLower' // Make sure the path is correct to the Footer component
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Discover', href: '#', current: false },
-  { name: 'About Us', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false },
-  { name: 'Our Stories', href: '#', current: false },
+  { name: 'Discover', href: '/discover', current: false },
+  { name: 'About Us', href: '/about', current: false },
+  { name: 'Contact Us', href: 'contact', current: false },
+  { name: 'Our Stories', href: '/blog', current: false },
   { name: 'Services', href: '#', current: false },
-  
-
 ]
 
 function classNames(...classes: string[]) {
@@ -27,11 +26,11 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex shrink-0 items-center">
               <Link href="/">
-              <img
-                alt="Your Company"
-                src="logo.png"
-                className="h-20 w-auto bg-whi"
-              />
+                <img
+                  alt="Your Company"
+                  src="logo.png"
+                  className="h-20 w-auto bg-whi"
+                />
               </Link>
             </div>
           </div>
@@ -42,7 +41,6 @@ export default function Navigation() {
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block h-12 w-12 size-12 group-data-open:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden h-12 w-12 size-12 group-data-open:block" />
             </DisclosureButton>
           </div>
         </div>
@@ -50,15 +48,15 @@ export default function Navigation() {
 
       {/* Mobile menu - always visible */}
       <DisclosurePanel className="7xl:hidden  fixed inset-0 bg-orange-950 bg-opacity-100 z-20 flex flex-col justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/overlay-bg.jpg')" }}>
-      <div className="absolute top-10 left-40 right-40  max-sm:top-0 max-sm:left-0 max-sm:right-0  max-lg:top-10 max-lg:left-10 max-lg:right-10  flex items-center justify-between px-4 py-2">
+        <div className="absolute top-10 left-40 right-40  max-sm:top-0 max-sm:left-0 max-sm:right-0  max-lg:top-10 max-lg:left-10 max-lg:right-10  flex items-center justify-between px-4 py-2">
           <div className="flex items-center">
             <div className="flex shrink-0 items-center">
               <Link href="/">
-              <img
-                alt="Your Company"
-                src="logo.png"
-                className="h-20 w-auto"
-              />
+                <img
+                  alt="Your Company"
+                  src="logo.png"
+                  className="h-20 w-auto"
+                />
               </Link>
             </div>
           </div>
@@ -72,12 +70,7 @@ export default function Navigation() {
             </DisclosureButton>
           </div>
         </div>
-        {/* <div className="absolute top-10 right-40 max-sm:right-2 px-4 py-2">
-          
-          <DisclosureButton className="text-white rounded-full hover:bg-rose-100 hover:text-rose-950 hover:bg-opacity-50  focus:outline-none">
-            <XMarkIcon className="size-12 max-sm:size-6 max-sm:text-lg text-9xl" aria-hidden="true" />
-          </DisclosureButton>
-        </div> */}
+
         <div className="mb-auto"></div>
         <div className="space-y-0 mx-20 mt-32 max-sm:mx-0 p-10 top-40 text-right max-sm:text-left">
           {navigation.map((item) => (
@@ -95,70 +88,10 @@ export default function Navigation() {
             </DisclosureButton>
           ))}
         </div>
-        <footer className=" text-white py-6 mt-auto w-full sticky bottom-0">
-          <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center max-sm:items-start px-4 sm:px-8">
-            {/* Left: Social Media Icons with Links */}
-            <div className="flex space-x-6 mb-4 sm:mb-0 border-1 p-2 border-rose-100">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-100"
-              >
-                <FaFacebookF size={24} /> {/* Facebook Icon */}
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-100"
-              >
-                <FaXTwitter size={24} /> {/* Twitter Icon */}
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-100"
-              >
-                <FaInstagram size={24} /> {/* Instagram Icon */}
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-100"
-              >
-                <FaLinkedinIn size={24} /> {/* LinkedIn Icon */}
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-100"
-              >
-                <FaTiktok size={24} /> {/* TikTok Icon */}
-              </a>
-            </div>
 
-              {/* Right: Footer Links */}
-              <div className="space-x-2 text-md mb-4 sm:mb-0">
-                <Link href="/terms" className="hover:text-rose-100">Terms & Conditions</Link>
-                <span className="text-rose-100">/</span>
-                <Link href="/about" className="hover:text-rose-100">About Us</Link>
-                <span className="text-rose-100">/</span>
-                <Link href="/disclaimer" className="hover:text-rose-100">Disclaimer</Link>
-              </div>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center text-sm py-4">
-              &copy; {new Date().getFullYear()} Well-lit Pictures. All Rights Reserved.
-            </div>
-        </footer>
-
+        {/* Replace existing footer with the Footer component */}
+        <Footer />
       </DisclosurePanel>
     </Disclosure>
-
   )
 }
