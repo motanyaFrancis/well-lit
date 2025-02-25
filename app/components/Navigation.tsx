@@ -30,7 +30,7 @@ export default function Navigation() {
               <img
                 alt="Your Company"
                 src="logo.png"
-                className="h-20 w-auto"
+                className="h-20 w-auto bg-whi"
               />
               </Link>
             </div>
