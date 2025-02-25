@@ -2,6 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Image from 'next/image';  // Import the Image component from next/image
 import Footer from './FooterLower';
 
 const navigation = [
@@ -25,10 +26,12 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex shrink-0 items-center">
               <Link href="/">
-                <img
-                  alt="Your Company"
-                  src="logo.png"
+                <Image
+                  alt="Well Lit Pictures"
+                  src="/logo.png"
                   className="h-20 w-auto bg-whi"
+                  width={80}  
+                  height={80}
                 />
               </Link>
             </div>
@@ -51,10 +54,12 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex shrink-0 items-center">
               <Link href="/">
-                <img
-                  alt="Your Company"
-                  src="logo.png"
+                <Image
+                  alt="Well Lit Pictures"
+                  src="/logo.png"
                   className="h-20 w-auto"
+                  width={80}  
+                  height={80}
                 />
               </Link>
             </div>
