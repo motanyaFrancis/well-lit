@@ -12,8 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
-  title: "Well-Lit Pictures",
+  title: {
+    template: '%s | Well Lit Pictures',
+    default: 'Well Lit Pictures',
+  },
   description: "Feel the moment",
 };
 
