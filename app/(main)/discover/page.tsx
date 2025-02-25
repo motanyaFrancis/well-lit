@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';  // Import Image from next/image
 import { Metadata } from 'next';
- 
+
 export const metadata: Metadata = {
   title: 'Discover',
 };
@@ -13,7 +14,14 @@ const Discover: React.FC = () => {
                     <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1 ">
                         <div className="w-full lg:justify-start justify-center items-start flex">
                             <div className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-orange-500/20 rounded-3xl relative backdrop-blur-lg">
-                                <img className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover" src="images/discover-3.jpg" alt="about Us image" />
+                                {/* Replace <img> with <Image> */}
+                                <Image 
+                                    className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover" 
+                                    src="/images/discover-3.jpg"  // Adjust the src path if necessary
+                                    alt="about Us image"
+                                    width={564}  // Specify the width
+                                    height={646} // Specify the height
+                                />
                             </div>
                         </div>
                         <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex bg-black/70 p-12 rounded-3xl">
