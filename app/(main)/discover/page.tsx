@@ -33,7 +33,7 @@ const Discover: React.FC = () => {
                                             The Tale of Our Achievement Story
                                         </h2>
                                         <p className="text-gray-100 text-base font-normal leading-relaxed lg:text-start text-center">
-                                            Our achievement story is a testament to teamwork and perseverance. Together, we've overcome challenges, celebrated victories, and created a narrative of progress and success.
+                                            Our achievement story is a testament to teamwork and perseverance. Together, we&lsquo;ve overcome challenges, celebrated victories, and created a narrative of progress and success.
                                         </p>
                                     </div>
                                 </div>

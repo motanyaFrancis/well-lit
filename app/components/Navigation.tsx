@@ -1,9 +1,8 @@
 'use client'
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn, FaTiktok} from 'react-icons/fa6';
-import Link from 'next/link'
-import Footer from './FooterLower' // Make sure the path is correct to the Footer component
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import Footer from './FooterLower';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -88,8 +87,6 @@ export default function Navigation() {
             </DisclosureButton>
           ))}
         </div>
-
-        {/* Replace existing footer with the Footer component */}
         <Footer />
       </DisclosurePanel>
     </Disclosure>
