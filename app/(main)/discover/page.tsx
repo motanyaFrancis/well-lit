@@ -14,13 +14,13 @@ const Discover: React.FC = () => {
                     <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1 ">
                         <div className="w-full lg:justify-start justify-center items-start flex">
                             <div className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-orange-500/20 rounded-3xl relative backdrop-blur-lg">
-                                {/* Replace <img> with <Image> */}
+                                
                                 <Image 
                                     className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover" 
-                                    src="/images/discover-3.jpg"  // Adjust the src path if necessary
+                                    src="/images/discover-3.jpg"  
                                     alt="about Us image"
-                                    width={564}  // Specify the width
-                                    height={646} // Specify the height
+                                    width={564}  
+                                    height={646} 
                                 />
                             </div>
                         </div>
