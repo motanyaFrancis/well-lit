@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -13,7 +14,7 @@ export default function RootLayout({
                         {children}
                     </div>
                 </div>
-
+                <Footer />
             </main>
         </>
 

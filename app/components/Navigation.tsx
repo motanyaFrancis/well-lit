@@ -3,7 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';  // Import the Image component from next/image
-import Footer from './FooterLower';
+// import Footer from './FooterLower';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -75,7 +75,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        <div className="mb-auto"></div>
+        {/* <div className="mb-auto"></div> */}
         <div className="space-y-0 mx-20 mt-32 max-sm:mx-0 p-10 top-40 text-right max-sm:text-left">
           {navigation.map((item) => (
             <DisclosureButton
@@ -84,15 +84,15 @@ export default function Navigation() {
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
-                item.current ? ' underline decoration-sky-500 decoration-wavy decoration-4 underline-offset-[2px]' : 'text-gray-300  hover:text-rose-200',
-                'block px-20 max-sm:px-8 py-4 text-2xl font-normal uppercase'
+                item.current ? ' text-orange-600 ' : 'text-gray-300  hover:text-rose-200',
+                'block px-20 max-sm:px-8 py-4 max-sm:py-2 text-2xl max-sm:text-base font-normal uppercase'
               )}
             >
               {item.name}
             </DisclosureButton>
           ))}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </DisclosurePanel>
     </Disclosure>
   )

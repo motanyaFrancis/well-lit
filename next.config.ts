@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['flowbite.s3.amazonaws.com', 'https://componentity.com', 'http://codenawis.com', 'https://codenawis.com'],
+  },
+
 };
 
 export default nextConfig;

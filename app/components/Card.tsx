@@ -1,5 +1,3 @@
-// components/Cards.tsx
-
 import Link from 'next/link';
 import { BsCamera2, BsFilm } from "react-icons/bs";
 import { GiSaxophone } from "react-icons/gi";
