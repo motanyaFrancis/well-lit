@@ -20,7 +20,7 @@ function classNames(...classes: string[]) {
 
 export default function Navigation() {
   return (
-    <Disclosure as="nav" className="sticky top-0 z-10">
+    <Disclosure as="nav" className="sticky top-0 z-[999]">
       <div className="relative w-full">
         <div className="absolute top-10 left-40 right-40  max-sm:top-0 max-sm:left-0 max-sm:right-0  max-lg:top-10 max-lg:left-10 max-lg:right-10  flex items-center justify-between px-4 py-2">
           <div className="flex items-center">
