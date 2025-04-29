@@ -8,7 +8,6 @@ import ArrowButtons from './components/ArrowButtons';
 import SearchBar from './components/SearchBar';
 import './styles/gallery.css';
 import { ReactNode } from 'react';
-import Head from 'next/head';
 
 interface DiscoverLayoutProps {
   children: ReactNode;
