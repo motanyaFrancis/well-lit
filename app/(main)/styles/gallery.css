@@ -152,16 +152,16 @@
     overflow: hidden;
     transition: all .6s ease-in-out;
   }
-  .container_gallery>div, .container_gallery div img{
-  /*   transition: all .6s ease-in-out; */
-  }
-  /*make bIG*/
+  /* .container_gallery>div, .container_gallery div img{
+  
+  } */
+  
   .container_gallery>div:hover, .container_gallery>div:hover img{
     transform: scale(1.05);
   }
-  .container_gallery>div:hover img{
-  /*   transform: scale(1.06); */
-  }
+  /* .container_gallery>div:hover img{
+
+  } */
   .card{
     padding: 0 !important;
     width: 100%;

@@ -36,11 +36,6 @@ const products: Product[] = [
   { name: 'Automations', description: 'Strategic funnels', href: '#', icon: ArrowPathIcon },
 ];
 
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-];
-
 type State = { mobileMenuOpen: boolean };
 type Action = { type: 'TOGGLE_MENU' };
 

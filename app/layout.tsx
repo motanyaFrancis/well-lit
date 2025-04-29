@@ -1,18 +1,20 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Sarabun } from "next/font/google";
 import "./styles/globals.css";
+import type { Metadata } from "next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Roboto
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["400", "700", "900"], 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Configure Sarabun
+const sarabun = Sarabun({
+  variable: "--font-sarabun",
   subsets: ["latin"],
+  weight: ["200", "400", "800"], 
 });
-
-
 
 export const metadata: Metadata = {
   title: {
@@ -28,11 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-      >
-        <div className="min-h-screen bg-[url(/images/background.jpg)] bg-cover bg-center font-[family-name:var(--font-geist-sans)]r">
+    <html lang="en" className={`${roboto.variable} ${sarabun.variable}`}>
+      <body className="antialiased font-roboto"> {/* Apply Roboto as the default body font */}
+        <div className="min-h-screen bg-[url(/images/background.jpg)] bg-cover bg-center">
           {children}
         </div>
       </body>
