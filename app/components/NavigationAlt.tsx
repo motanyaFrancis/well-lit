@@ -1,18 +1,12 @@
 'use client';
 
-import { useReducer, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
 } from '@headlessui/react';
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -22,9 +16,10 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMemo, useReducer } from 'react';
 
 interface Product {
   name: string;

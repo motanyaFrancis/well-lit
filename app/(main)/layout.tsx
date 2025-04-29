@@ -19,11 +19,11 @@ const DiscoverLayout: React.FC<DiscoverLayoutProps> = ({ children }) => {
     <section className='gallery_body'>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:900|Sarabun:200,400,800"
+          href="https://fonts.googleapis.com/css?family=Roboto:900|Sarabun:200,400,800&display=optional"
           rel="stylesheet"
         />
       </Head>
-      <div className="blur"></div> 
+      <div className="blur"></div>
       <Header />
       {children}
       <Navigation />
