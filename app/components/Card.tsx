@@ -6,23 +6,23 @@ import { GiSaxophone } from "react-icons/gi";
 const cardData = [
   {
     id: 1,
-    icon: <BsCamera2 size={100} className="text-white" />,  
-    title: 'Photography',
+    icon: <BsCamera2 size={80} className="text-white" />,  
+    title: 'Photo',
     description:
       'Capture moments with your camera. Photography is an art that immortalizes memories and tells stories.',
     contactLink: '#', 
   },
   {
     id: 2,
-    icon: <BsFilm size={100} className="text-white" />,  
-    title: 'Film Making',
+    icon: <BsFilm size={80} className="text-white" />,  
+    title: 'Film',
     description:
       'Create cinematic masterpieces. Filmmaking combines storytelling with visuals to entertain and educate.',
     contactLink: '#', 
   },
   {
     id: 3,
-    icon: <GiSaxophone size={100} className="text-white" />,  
+    icon: <GiSaxophone size={80} className="text-white" />,  
     title: 'Music',
     description:
       'Let the sound of the music fill the air. Music is the language of the soul, and jazz is its freestyle expression.',
@@ -46,11 +46,11 @@ const Cards: React.FC = () => {
             
             <div
               id="content"
-              className="p-8 py-24 w-72 bg-gray-950/50 border-2 border-gray-100/50 rounded-xl shadow-lg relative space-y-7"
+              className="h-72 w-72  max-md:h-56 max-md:w-56 bg-gray-950/50 border-t-8 border-r-8 border-gray-100/50 rounded-full shadow-lg relative space-y-4 flex flex-col justify-center"
             >
               {/* <div className="bg-orange-600 h-3 w-16 ml-auto"></div> */}
               
-              <div className="text-center mb-4 justify-items-center py-12 pb-8">{card.icon}</div>
+              <div className="text-center mb-4 justify-items-center ">{card.icon}</div>
               <h2 className="text-2xl font-bold text-gray-100 uppercase">{card.title}</h2>
               {/* <p className="text-gray-100">{card.description}</p> */}
               {/* <span className="flex items-center mt-4 text-gray-100">

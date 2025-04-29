@@ -97,7 +97,7 @@ const Footer = () => {
                 {/* Footer Bottom Section */}
                 <div className="relative mt-8">
                     <div className="relative flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4">
-                        <p className="text-sm text-gray-900 text-center md:text-left mb-4 md:mb-0">&copy; 2024 Well Lit Pictures.</p>
+                        <p className="text-sm text-gray-900 text-center md:text-left mb-4 md:mb-0">&copy; {new Date().getFullYear()} Well Lit Pictures.</p>
                         <div className="flex space-x-4 justify-center md:justify-end">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Tiktok" className="text-gray-900 hover:text-orange-500">
                                 <FaTiktok className="h-6 w-6" />
