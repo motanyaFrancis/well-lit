@@ -17,13 +17,7 @@ interface DiscoverLayoutProps {
 const DiscoverLayout: React.FC<DiscoverLayoutProps> = ({ children }) => {
   return (
     <section className='gallery_body'>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:900|Sarabun:200,400,800"
-          rel="stylesheet"
-        />
-      </Head>
-      <div className="blur"></div> 
+      <div className="blur"></div>
       <Header />
       {children}
       <Navigation />
