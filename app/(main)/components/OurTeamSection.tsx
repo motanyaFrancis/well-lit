@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
-interface OurTeamSectionProps {}
+interface OurTeamSectionProps {
+    [key: string]: never;
+}
 
 const OurTeamSection: React.FC<OurTeamSectionProps> = () => {
   return (

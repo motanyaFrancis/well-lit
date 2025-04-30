@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
-interface AboutUsSectionProps {}
+interface AboutUsSectionProps {
+    [key: string]: never;
+}
 
 const AboutUsSection: React.FC<AboutUsSectionProps> = () => {
   return (
