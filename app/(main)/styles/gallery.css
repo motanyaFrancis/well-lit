@@ -4,8 +4,11 @@
     /* letter-spacing: .4em; */
     /* text-transform: uppercase; */
     /* font-weight: 200; */
-    color: black;
+    color: inherit;
     text-decoration: none;
+  }
+  .overlay_nav{
+    color: white !important;
   }
   .gallery_body {
     background-color: white;
@@ -43,6 +46,7 @@
     box-sizing: border-box;
     position: relative;
     text-transform: uppercase;
+    color: black
   /*   box-shadow: 0px 1px 0px 0px black; */
   }
   .header_span:after{
@@ -77,6 +81,7 @@
     writing-mode: vertical-rl;
     padding-top: 6vh;
     transform: translateX(25%);
+    color:black;
     text-transform: uppercase;
   }
   li a.active{
@@ -91,6 +96,7 @@
     position: relative;
     top: -2px;
     align-content: end;
+    color: black;
   }
   .aside i{
     color: #f7a206 !important;
@@ -126,6 +132,24 @@
     overflow: auto;
     padding-right: 20px;  /*fix box-shadow on right side cutting off*/
   }
+  .container_body {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr; /* Changed to a single column */
+    grid-auto-rows: 100%;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    overflow: auto;
+    padding-right: 20px; /*fix box-shadow on right side cutting off*/
+  }
+  .container_body::-webkit-scrollbar {
+    display: none;
+  }
+  .container_body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   /*scrollbar stuff*/
   .container_gallery {
       -ms-overflow-style: none;  
@@ -143,7 +167,7 @@
                 5px 5px 25px rgba(0,0,0,.1);
     transition: all .3s ease-in-out;
   }
-  .container_gallery div img{
+  .container_gallery div .img_grid{
     position: absolute;
     top: 0;
     width: 100%;
@@ -156,7 +180,7 @@
   
   } */
   
-  .container_gallery>div:hover, .container_gallery>div:hover img{
+  .container_gallery>div:hover, .container_gallery>div:hover .img_grid{
     transform: scale(1.05);
   }
   /* .container_gallery>div:hover img{
@@ -361,7 +385,7 @@
   
   /* Animation Stuff */
   *:not(a){
-    animation: 3s ease-out 0s 1 fadeIn;
+    animation: 100ms ease-out 0s 1 fadeIn;
   }
   @keyframes slideInFromLeft{
     0%{
@@ -403,3 +427,8 @@
       opacity: 1;
     }
   }
+
+
+  /* overlay styling */
+
+  
