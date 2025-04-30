@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
     const pathname = usePathname();
 
     return (
-        <div className="-none leftNavBar flex justify-center">
+        <div className="hidden md:flex justify-center leftNavBar">
             <ul className='py-auto'>
                 <li>
                     <Link href="/" className={pathname === '/' ? "active" : ""}>
