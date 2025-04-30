@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/contact" className={pathname === '/discover' ? "active" : ""}>
+                    <Link href="/contact" className={pathname === '/contact' ? "active" : ""}>
                         Contact
                     </Link>
                 </li>
