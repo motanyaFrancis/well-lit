@@ -356,32 +356,57 @@
     cursor: pointer;
   }
   .menu-icon {
-    width: 16px;
+    width: 20px;
     height: 1px;
-    border: none !important;
     background: black;
     position: relative;
-    transform: translateY(-700%);
-    transition: opacity .2s ease-in-out;
-    }
-  .menu-icon::after {
-      content: '';
-      width: 6px;
-      height: 1px;
-      background: black;
-      position: absolute;
-      top: 10px;
-      left: 0px;
-    } 
-  .menu-icon::before{
-      content: '';
-      width: 10px;
-      height: 1px;
-      background: black;
-      position: absolute;
-      top: 5px; 
-      left: 0;
+    transition: all 0.3s ease;
+    transform: translateY(-700%); /* Consider lowering this to make it visible */
   }
+  
+  .menu-icon::before,
+  .menu-icon::after {
+    content: '';
+    position: absolute;
+    background: black;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon::before {
+    width: 16px;
+    height: 1px;
+    top: 5px;
+    left: 0;
+  }
+  
+  .menu-icon::after {
+    width: 10px;
+    height: 1px;
+    top: 10px;
+    left: 0;
+  }
+  
+  /* Morph to "X" */
+  .menu-icon.open {
+    background: transparent;
+  }
+  
+  .menu-icon.open::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+    transform: rotate(45deg);
+    background: white; /* White X line */
+  }
+  
+  .menu-icon.open::after {
+    top: 0;
+    left: 0;
+    width: 20px;
+    transform: rotate(-45deg);
+    background: white; /* White X line */
+  }  
+  
   
   /* Animation Stuff */
   *:not(a){
