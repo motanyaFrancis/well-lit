@@ -10,7 +10,7 @@ const cardData = [
     title: 'Photo',
     description:
       'Capture moments with your camera. Photography is an art that immortalizes memories and tells stories.',
-    contactLink: '#', 
+    contactLink: '/discover', 
   },
   {
     id: 2,

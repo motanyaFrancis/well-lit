@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} ${sarabun.variable}`}>
       <body className="antialiased font-roboto"> {/* Apply Roboto as the default body font */}
-        <div className="min-h-screen bg-[url(/images/background.jpg)] bg-cover bg-center">
+        <div className="min-h-screen bg-black">
           {children}
         </div>
       </body>
