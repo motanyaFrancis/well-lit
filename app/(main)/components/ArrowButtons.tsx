@@ -6,7 +6,7 @@ import { AiFillHome } from 'react-icons/ai';
 
 const HomeButton: React.FC = () => {
   return (
-    <div className="arrowButton bg-sky-500 flex items-center justify-center">
+    <div className="arrowButton bg-sky-500 hidden md:flex items-center justify-center">
       <Link href="/" aria-label="Home">
         <AiFillHome size={32} color="white" />
       </Link>
