@@ -1,22 +1,17 @@
-// app/discover/components/ArrowButtons.tsx
-'use client'; // This component needs client-side interactivity
+'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { AiFillHome } from 'react-icons/ai';
 
-const ArrowButtons: React.FC = () => {
-  const handleScrollDown = () => {
-    window.scroll({
-      top: 100,
-      behavior: 'smooth',
-    });
-  };
-
+const HomeButton: React.FC = () => {
   return (
-    <div className="arrowButton bg-sky-500"> {/* Use global class name */}
-      <button><div className="arrowUpIcon"></div></button> {/* Use global class name */}
-      <button onClick={handleScrollDown}><div className="arrowDownIcon"></div></button> {/* Use global class name */}
+    <div className="arrowButton bg-sky-500 flex items-center justify-center">
+      <Link href="/" aria-label="Home">
+        <AiFillHome size={32} color="white" />
+      </Link>
     </div>
   );
 };
 
-export default ArrowButtons;
+export default HomeButton;
