@@ -1,96 +1,130 @@
 .enhanced-overlay {
-    background-color: rgba(0, 0, 0, 0.2); /* optional translucent bg */
-  }
-  
-  .enhanced-overlay ul li span {
-    position: relative;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .enhanced-overlay ul li span::before {
-    content: '';
-    width: 60px;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .enhanced-overlay ul li span::after {
-    content: attr(data-content);
-    font-size: 0.7rem;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap;
-  }
-  
-  .enhanced-overlay ul li:hover span::before {
-    transform: translateX(0);
-    opacity: 1;
-    display: none;
-  }
-  
-  .enhanced-overlay ul li:hover span::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  
-  .overlay_nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    background: #000; /* fallback if no individual colors set */
-  }
-  
-  .enhanced-overlay {
-    background: linear-gradient(to right, #29363B, #EA495F, #F4837D, #FDCEA9, #99B998, #6C5B7B);
-  }
-  
-  .menuButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  
-  .menu-icon {
-    width: 24px;
-    height: 2px;
-    background-color: black;
-    position: relative;
-  }
-  .menu-icon::before,
-  .menu-icon::after {
-    content: "";
-    width: 24px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    left: 0;
-  }
-  .menu-icon::before {
-    top: -8px;
-  }
-  .menu-icon::after {
-    top: 8px;
-  }
-  
+  background-color: rgba(0, 0, 0, 0.2);
+  /* optional translucent bg */
+}
+
+.enhanced-overlay ul li span {
+  position: relative;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.enhanced-overlay ul li span::before {
+  content: '';
+  width: 60px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.enhanced-overlay ul li span::after {
+  content: attr(data-content);
+  font-size: 0.7rem;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.enhanced-overlay ul li:hover span::before {
+  transform: translateX(0);
+  opacity: 1;
+  display: none;
+}
+
+.enhanced-overlay ul li:hover span::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.overlay_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  /* fallback if no individual colors set */
+}
+
+.enhanced-overlay {
+  background: linear-gradient(to right, #29363B, #EA495F, #F4837D, #FDCEA9, #99B998, #6C5B7B);
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-icon_home {
+  width: 24px;
+  height: 1.5px;
+  background: white;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateY(-700%);
+  /* Consider lowering this to make it visible */
+}
+
+.menu-icon_home::before,
+.menu-icon_home::after {
+  content: '';
+  position: absolute;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.menu-icon_home::before {
+  width: 18px;
+  height: 1.5px;
+  top: 5px;
+  left: 0;
+}
+
+.menu-icon_home::after {
+  width: 14px;
+  height: 1.5px;
+  top: 10px;
+  left: 0;
+}
+
+/* Morph to "X" */
+.menu-icon_home.open {
+  background: transparent;
+}
+
+.menu-icon_home.open::before {
+  top: 0;
+  left: 0;
+  width: 24px;
+  transform: rotate(45deg);
+  background: white;
+  /* White X line */
+}
+
+.menu-icon_home.open::after {
+  top: 0;
+  left: 0;
+  width: 24px;
+  transform: rotate(-45deg);
+  background: white;
+  /* White X line */
+}
