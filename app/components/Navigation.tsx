@@ -1,10 +1,11 @@
 'use client';
+
 import React, { useState } from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion'; 
+import { motion, AnimatePresence } from 'framer-motion';
 import '../(main)/styles/Header.css';
 
 const navItems = [
@@ -15,10 +16,6 @@ const navItems = [
   { href: '/about', label: 'About Us', color: '#99B998', content: 'Who We Are' },
   { href: '/contact', label: 'Contact Us', color: '#6C5B7B', content: 'Reach Out' },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
 
 export default function Navigation() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -64,10 +61,10 @@ export default function Navigation() {
           </div>
 
           {/* <div className="flex items-center"> */}
-            {/* Custom Menu Button */}
-            <button className="menuButton p-2" onClick={toggleOverlay}>
-              <div className={`menu-icon menu-icon_home  ${isOverlayOpen ? 'open' : ''}`}></div>
-            </button>
+          {/* Custom Menu Button */}
+          <button className="menuButton p-2" onClick={toggleOverlay}>
+            <div className={`menu-icon menu-icon_home  ${isOverlayOpen ? 'open' : ''}`}></div>
+          </button>
           {/* </div> */}
         </div>
       </div>
