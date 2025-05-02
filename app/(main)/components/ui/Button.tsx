@@ -51,7 +51,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         const sizeClasses = {
             default: 'px-6 py-3 text-base',
             sm: 'px-4 py-2 text-sm',
-            lg: 'px-8 py-4 text-lg',
+            lg: 'px-8 py-3 text-lg',
             icon: 'p-3', // For a square icon button, adjust padding as needed
         };
 

@@ -9,10 +9,12 @@ export const metadata: Metadata = {
 const ContactUS: React.FC = () => {
   return (
     <>
-    <div className='container_body'>
-      <Contact />
-    </div>
-    
+      <div className='container_body'>
+        <div>
+          <Contact />
+        </div>
+      </div>
+
     </>
   );
 };

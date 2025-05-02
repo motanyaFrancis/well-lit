@@ -17,7 +17,7 @@ const cardData = [
     title: 'Film',
     description:
       'Create cinematic masterpieces. Filmmaking combines storytelling with visuals to entertain and educate.',
-    contactLink: '#',
+    contactLink: '/film',
   },
   {
     id: 3,

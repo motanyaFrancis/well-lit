@@ -7,15 +7,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../(main)/styles/Header.css';
+import { navItems } from '@/app/lib/navItems';
 
-const navItems = [
-  { href: '#photos', label: 'Photos', color: '#29363B', content: 'Visual Stories' },
-  { href: '#videos', label: 'Videos', color: '#EA495F', content: 'Moving Frames' },
-  { href: '#music', label: 'Music', color: '#F4837D', content: 'Sonic Vibes' },
-  { href: '/discover', label: 'Discover', color: '#FDCEA9', content: 'Explore More' },
-  { href: '/about', label: 'About Us', color: '#99B998', content: 'Who We Are' },
-  { href: '/contact', label: 'Contact Us', color: '#6C5B7B', content: 'Reach Out' },
-];
 
 export default function Navigation() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
