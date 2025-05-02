@@ -57,7 +57,7 @@ const VideoReel = () => {
     <div className="w-full h-full flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full h-full overflow-y-auto sm:overflow-x-auto sm:overflow-y-hidden">
         <div
-          className={`flex flex-col sm:flex-row gap-4 sm:gap-4 sm:justify-center ${styles.scrollContainer} mx-auto my-auto`}
+          className={`flex flex-col sm:flex-row gap-4 sm:gap-8 sm:justify-center ${styles.scrollContainer} pt-20 mx-auto my-auto`}
         >
           {videos.map((video) => (
             <div

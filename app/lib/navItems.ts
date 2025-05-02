@@ -4,5 +4,5 @@ export const navItems = [
     { href: '#music', label: 'Music', title: 'Music', color: '#F4837D', content: 'Sonic Vibes' },
     { href: '/discover', label: 'Discover', title: 'Discover', color: '#FDCEA9', content: 'Explore More' },
     { href: '/about', label: 'About Us', title: 'About Us', color: '#99B998', content: 'Who We Are' },
-    { href: '/contact', label: 'Contact Us', title: 'Get in Touch', color: '#6C5B7B', content: 'Reach Out' },
+    { href: '/contact', label: 'Contact Us', title: 'Reach Out', color: '#6C5B7B', content: 'Reach Out' },
 ];
