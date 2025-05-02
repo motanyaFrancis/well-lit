@@ -1,7 +1,4 @@
-// components/VideoReel.tsx
-
 import React from 'react';
-import { FaPlay } from 'react-icons/fa';
 import styles from '../styles/VideoReel.module.css';
 
 const videos = [
@@ -78,13 +75,6 @@ const VideoReel = () => {
 
                 {/* Dark overlay on hover */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-
-                {/* Play Button Overlay - hidden on hover */}
-                {/* <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="opacity-60 group-hover:opacity-0 transition-opacity duration-300">
-                    <FaPlay className="text-white text-4xl md:text-5xl lg:text-6xl" />
-                  </div>
-                </div> */}
 
                 {/* Title centered on hover */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
