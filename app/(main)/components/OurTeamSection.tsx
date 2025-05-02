@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Button from '@/app/(main)/components/ui/Button';
 
 interface OurTeamSectionProps {
-    [key: string]: never;
+  [key: string]: never;
 }
 
 const OurTeamSection: React.FC<OurTeamSectionProps> = () => {
@@ -17,8 +18,10 @@ const OurTeamSection: React.FC<OurTeamSectionProps> = () => {
             </h2>
             <p className="text-lg text-gray-500 mb-16 text-center lg:text-left">These people work on making our
               product best.</p>
-            <button className="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">Join
-              our team</button>
+            <Button variant='primary' shape='full' size='lg' className=' font-semibold mx-auto '>
+              Join Our Team
+            </Button>
+
           </div>
           <div className="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
             <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">

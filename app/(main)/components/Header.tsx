@@ -1,20 +1,21 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Header.css';
-
-const navItems = [
-    { href: '#photos', label: 'Photos', color: '#29363B', content: 'Visual Stories' },
-    { href: '#videos', label: 'Videos', color: '#EA495F', content: 'Moving Frames' },
-    { href: '#music', label: 'Music', color: '#F4837D', content: 'Sonic Vibes' },
-    { href: '/discover', label: 'Discover', color: '#FDCEA9', content: 'Explore More' },
-    { href: '/about', label: 'About Us', color: '#99B998', content: 'Who We Are' },
-    { href: '/contact', label: 'Contact Us', color: '#6C5B7B', content: 'Reach Out' },
-];
+import { navItems } from '@/app/lib/navItems';
 
 const Header: React.FC = () => {
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+    const [pageTitle, setPageTitle] = useState('');
+    const pathname = usePathname();
+
+    // Title map based on routes
+    useEffect(() => {
+        const current = navItems.find(item => item.href === pathname);
+        setPageTitle(current?.title || 'Well-Lit Pictures');
+    }, [pathname]);
 
     const toggleOverlay = () => {
         setIsOverlayOpen(!isOverlayOpen);
@@ -41,8 +42,8 @@ const Header: React.FC = () => {
     return (
         <>
             <nav className="barStyle topBar">
-                <span className="header_span">Well-Lit</span>
-                <strong className="header_strong">Pictures</strong>
+                <span className="header_span header_strong">{pageTitle}</span>
+                {/* <strong className="header_strong">Pictures</strong> */}
                 <button className="menuButton" onClick={toggleOverlay}>
                     <div className={`menu-icon ${isOverlayOpen ? 'open' : ''}`}></div>
                 </button>
@@ -56,7 +57,6 @@ const Header: React.FC = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        
                         <ul className="flex flex-col md:flex-row w-full h-full text-white text-center text-xl font-light uppercase tracking-widest">
                             {navItems.map((item, index) => (
                                 <motion.li
