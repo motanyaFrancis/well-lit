@@ -1,6 +1,6 @@
 // app/discover/page.tsx
-import FeatureSection from '@/app/(main)/components/FeatureSection';
-import ToolSection from '@/app/(main)/components/ToolSection';
+import FeatureSection from '@/app/components/FeatureSection';
+import ToolSection from '@/app/components/ToolSection';
 import { homeContent } from '@/app/data/homeContent';
 import { Metadata } from 'next';
 

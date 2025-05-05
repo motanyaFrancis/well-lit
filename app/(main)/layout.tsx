@@ -1,12 +1,12 @@
 // app/discover/Layout.tsx
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Aside from './components/Aside';
-import Footer from './components/Footer';
-import FooterRight from './components/FooterRight';
-import ArrowButtons from './components/ArrowButtons';
-import SearchBar from './components/SearchBar';
-import './styles/gallery.css';
+import Header from '@/app/components/Header';
+import Navigation from '@/app/(main)/components/Navigation';
+import Aside from '@/app/components/Aside';
+import Footer from '@/app/components/Footer';
+import FooterRight from '@/app/components/FooterRight';
+import ArrowButtons from '@/app/components/ArrowButtons';
+import SearchBar from '@/app/components/SearchBar';
+import '@/app/styles/gallery.css';
 import { ReactNode } from 'react';
 
 interface DiscoverLayoutProps {

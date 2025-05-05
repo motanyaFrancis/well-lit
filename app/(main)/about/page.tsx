@@ -1,5 +1,5 @@
-import AboutMe from "@/app/(main)/components/AboutMe";
-import OurTeam from "@/app/(main)/components/OurTeamSection";
+import AboutMe from "@/app/components/AboutMe";
+import OurTeam from "@/app/components/OurTeamSection";
 import { Metadata } from 'next';
 import React from 'react';
 

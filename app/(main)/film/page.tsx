@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import VideoReel from "@/app/(main)/components/VideoReel"
+import VideoReel from "@/app/components/VideoReel"
 
 
 
