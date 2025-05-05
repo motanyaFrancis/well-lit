@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import MusicGallery from '@/app/(main)/components/MusicGallery';
+import MusicGallery from '@/app/components/MusicGallery';
 import { MusicData } from '@/app/types/music';
 
 export const metadata: Metadata = {
@@ -36,6 +36,7 @@ const sampleMusicData: MusicData = {
             audioUrl: '/audio/lofi1.mp3',
             year: 2024,
             genre: 'Lofi',
+            isFeatured: false
         },
         {
             id: 104,
@@ -45,15 +46,17 @@ const sampleMusicData: MusicData = {
             audioUrl: '/audio/lofi1.mp3',
             year: 2024,
             genre: 'Lofi',
+            isFeatured: false
         },
         {
             id: 105,
-            title: 'Sunset Drive',
-            artist: 'Lofi Guy',
-            thumbnail: '/thumbnails/lofi1.jpg',
+            title: 'Dance Time',
+            artist: 'Smart Ngare',
+            thumbnail: '/thumbnails/lofi2.jpg',
             audioUrl: '/audio/lofi1.mp3',
             year: 2024,
-            genre: 'Lofi',
+            genre: 'Ra',
+            isFeatured: true
         },
         {
             id: 106,
@@ -63,6 +66,7 @@ const sampleMusicData: MusicData = {
             audioUrl: '/audio/lofi1.mp3',
             year: 2024,
             genre: 'Lofi',
+            isFeatured: false
         },
         {
             id: 107,
@@ -72,8 +76,9 @@ const sampleMusicData: MusicData = {
             audioUrl: '/audio/lofi1.mp3',
             year: 2024,
             genre: 'Lofi',
+            isFeatured: false
         },
-        // Add more...
+        
     ],
 };
 

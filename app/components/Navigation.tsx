@@ -6,7 +6,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import '@/app/(main)/styles/Header.css';
+import '@/app/styles/Header.css';
 import { navItems } from '@/app/utils/navigation';
 
 

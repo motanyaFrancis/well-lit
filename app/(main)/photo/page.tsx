@@ -1,5 +1,5 @@
 // app/discover/page.tsx
-import ImageGrid from '../components/ImageGrid';
+import ImageGrid from '@/app/components/ImageGrid';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
