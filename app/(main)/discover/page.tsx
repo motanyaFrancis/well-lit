@@ -1,5 +1,7 @@
 // app/discover/page.tsx
-import ImageGrid from '../components/ImageGrid';
+import FeatureSection from '@/app/(main)/components/FeatureSection';
+import ToolSection from '@/app/(main)/components/ToolSection';
+import { homeContent } from '@/app/data/homeContent';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,7 +10,17 @@ export const metadata: Metadata = {
 
 const DiscoverPage = () => {
   return (
-    <ImageGrid />
+    <div className='container_body'>
+      <div>
+        {
+          homeContent.featureSections.map((section, index) => (
+            <FeatureSection key={index} {...section} />
+          ))
+        }
+
+        < ToolSection {...homeContent.toolSection} />
+      </div>
+    </div>
   );
 };
 

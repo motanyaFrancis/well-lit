@@ -1,8 +1,7 @@
+import AboutMe from "@/app/(main)/components/AboutMe";
+import OurTeam from "@/app/(main)/components/OurTeamSection";
 import { Metadata } from 'next';
 import React from 'react';
-import AboutMe from "@/app/(main)/components/AboutMe"
-import OurTeam from "@/app/(main)/components/OurTeamSection"
-
 
 export const metadata: Metadata = {
   title: 'About Us',

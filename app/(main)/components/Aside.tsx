@@ -1,6 +1,6 @@
 // app/discover/components/Aside.tsx
 import Link from 'next/link';
-import { FaInstagram, FaFacebookSquare, FaTwitter, FaGooglePlusG } from 'react-icons/fa';
+import { FaInstagram, FaSquareFacebook, FaTiktok, FaXTwitter } from 'react-icons/fa6';
 
 const Aside: React.FC = () => {
   return (
@@ -9,13 +9,13 @@ const Aside: React.FC = () => {
         <FaInstagram size={24} />
       </Link>
       <Link href="https://twitter.com/nuclearfischion" className="centerItem" target="_blank" rel="noopener noreferrer"> {/* Use global class names */}
-        <FaFacebookSquare size={24} />
+        <FaSquareFacebook size={24} />
       </Link>
       <Link href="https://twitter.com/nuclearfischion" className="centerItem" target="_blank" rel="noopener noreferrer"> {/* Use global class names */}
-        <FaTwitter size={24} />
+        <FaXTwitter size={24} />
       </Link>
       <Link href="https://twitter.com/nuclearfischion" className="centerItem" target="_blank" rel="noopener noreferrer"> {/* Use global class names */}
-        <FaGooglePlusG size={24} />
+        <FaTiktok size={24} />
       </Link>
     </div>
   );

@@ -1,15 +1,28 @@
 import React from 'react';
-import '../styles/globals.css';
+import Image from 'next/image';
 
 const Loader: React.FC = () => {
   return (
-    <div className="container">
-      <div className="yellow"></div>
-      <div className="red"></div>
-      <div className="blue"></div>
-      <div className="violet"></div>
+    <div style={styles.container}>
+      <Image
+        src="/loader.gif"
+        alt="Loading..."
+        width={200}
+        height={200}
+        unoptimized
+      />
     </div>
   );
-}
+};
+
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#1b1b1b',
+  },
+};
 
 export default Loader;
