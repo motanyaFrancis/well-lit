@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Header.css';
-import { navItems } from '@/app/lib/navItems';
+import { navItems } from '@/app/utils/navigation';
 
 const Header: React.FC = () => {
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);

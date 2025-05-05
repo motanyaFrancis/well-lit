@@ -1,7 +1,7 @@
 import AudioManager from '@/app/utils/AudioManager';
 import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useRef, useState } from 'react';
-import { Track } from '../types/music';
+import { Track } from '@/app/types/music';
 
 interface MusicCardProps {
   track: Track;

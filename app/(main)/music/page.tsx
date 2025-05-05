@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import React from 'react';
-import MusicGallery from '../components/MusicGallery';
-import { MusicData } from '../types/music';
+import MusicGallery from '@/app/(main)/components/MusicGallery';
+import { MusicData } from '@/app/types/music';
 
 export const metadata: Metadata = {
     title: 'Music',
