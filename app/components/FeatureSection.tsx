@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 export interface FeatureSectionProps {
     imageSrc: string;
     imagePosition: 'left' | 'right';
@@ -16,7 +16,8 @@ const FeatureSection = ({
 }: FeatureSectionProps) => {
     const imageElement = (
         <div className="w-full max-w-md px-4 mb-4 text-center md:max-w-none md:w-1/2">
-            <img src={imageSrc} alt={title} className="mx-auto" />
+            <Image src={imageSrc} alt={title} width={500}
+                height={500} className="mx-auto" />
         </div>
     );
 

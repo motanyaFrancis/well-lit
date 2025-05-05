@@ -3,6 +3,7 @@ import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useRef, useState } from 'react';
 import { Track } from '@/app/types/music';
 import ColorThief from 'colorthief';
+import Image from 'next/image';
 
 interface FeaturedTrackProps {
   track: Track;
@@ -74,12 +75,14 @@ const FeaturedTrack: React.FC<FeaturedTrackProps> = ({ track }) => {
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Thumbnail */}
-        <img
+        <Image
           ref={imgRef}
           src={track.thumbnail}
           alt={track.title}
           crossOrigin="anonymous"
           onLoad={handleImageLoad}
+          width={500}
+          height={500}
           className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-lg"
         />
 
