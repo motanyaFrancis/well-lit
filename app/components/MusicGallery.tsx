@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MusicData, Track } from '@/app/types/music';
+import { MusicData } from '@/app/types/music';
 import FeaturedTrack from './FeaturedTrack';
 import FilterSection from './FilterSection';
 import MusicCard from './MusicCard';

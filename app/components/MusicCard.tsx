@@ -2,6 +2,7 @@ import AudioManager from '@/app/utils/AudioManager';
 import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useRef, useState } from 'react';
 import { Track } from '@/app/types/music';
+import Image from 'next/image';
 
 interface MusicCardProps {
   track: Track;
@@ -66,9 +67,11 @@ const MusicCard: React.FC<MusicCardProps> = ({ track }) => {
       {/* Top: Album Art + Track Info */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <img
+          <Image
             src={track.thumbnail}
             alt={track.title}
+            width={500}
+            height={500}
             className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-lg"
           />
           <div className="flex flex-col">
