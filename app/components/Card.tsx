@@ -25,7 +25,7 @@ const cardData = [
     title: 'Music',
     description:
       'Let the sound of the music fill the air. Music is the language of the soul, and jazz is its freestyle expression.',
-    contactLink: '#',
+    contactLink: '/music',
   },
 ];
 
