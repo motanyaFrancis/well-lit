@@ -393,7 +393,7 @@ button:focus {
   height: 100%;
   width: 30%;
   content: "";
-  border-bottom: 1px solid #E2A9E5;
+  border-bottom: 1px solid orange;
   /*   padding: 0 12%; */
   animation: 3s ease-out fadeIn;
 }
