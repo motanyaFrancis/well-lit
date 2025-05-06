@@ -1,3 +1,5 @@
+'use client';
+
 import AudioManager from '@/app/utils/AudioManager';
 import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,12 +14,14 @@ interface FeaturedTrackProps {
 const FeaturedTrack: React.FC<FeaturedTrackProps> = ({ track }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
-  const [isPlaying] = useState(false);
-  const [progress] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [gradientStyle, setGradientStyle] = useState<string>('');
   const [buttonColor, setButtonColor] = useState<string>('#0ea5e9');
   const [palette, setPalette] = useState<number[][]>([]);
-  const [screenWidth, setScreenWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 1024);
+  const [screenWidth, setScreenWidth] = useState<number>(
+    typeof window !== 'undefined' ? window.innerWidth : 1024
+  );
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -30,17 +34,12 @@ const FeaturedTrack: React.FC<FeaturedTrackProps> = ({ track }) => {
     }
   };
 
-
-
-
-  // Resize listener
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Recompute gradient when screen size or palette changes
   useEffect(() => {
     if (palette.length === 3) {
       const direction = screenWidth < 768 ? 'to bottom' : 'to right';
@@ -66,11 +65,37 @@ const FeaturedTrack: React.FC<FeaturedTrackProps> = ({ track }) => {
     }
   };
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+    const handleTimeUpdate = () => {
+      if (audio.duration) {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        setProgress(percent);
+      }
+    };
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+    audio.addEventListener('timeupdate', handleTimeUpdate);
+
+    return () => {
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
+    };
+  }, []);
+
   return (
     <div
       className="text-white p-6 rounded-lg shadow-md mb-8"
       style={{
-        background: gradientStyle || 'linear-gradient(to right,rgb(109, 109, 109),rgb(138, 138, 138),rgb(29, 29, 29))',
+        background:
+          gradientStyle ||
+          'linear-gradient(to right, rgb(109, 109, 109), rgb(138, 138, 138), rgb(29, 29, 29))',
       }}
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -90,9 +115,11 @@ const FeaturedTrack: React.FC<FeaturedTrackProps> = ({ track }) => {
         <div className="flex flex-col items-center md:items-start flex-grow">
           <span className="text-2xl font-bold">{track.title}</span>
           <span className="text-md text-white/90 mt-1">{track.artist}</span>
-          {track.album && <span className="text-sm text-white/70">Album: {track.album}</span>}
+          {track.album && (
+            <span className="text-sm text-white/70">Album: {track.album}</span>
+          )}
 
-          {/* Play/Pause */}
+          {/* Play/Pause Button */}
           <button
             onClick={togglePlay}
             style={{
